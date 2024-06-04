@@ -1,0 +1,379 @@
+.app {
+   position: fixed;
+   left: 0;
+   top: 0;
+}
+
+html {
+   height: 100%;
+   min-height: 100%;
+}
+
+body {
+   height: 100%;
+   min-height: 100%;
+}
+
+.main-background {
+
+   width: 1080px;
+   height: 1920px;
+   /* z-index: 0; */
+   /* background-color: green; */
+}
+
+
+/* *** START PAGE*************(index.htm) */
+.primaryAppGrids {
+   display: grid;
+   grid-template-rows: 200px 710px 300px 635px 75px;
+   /* background-color: green; */
+   z-index: 1;
+}
+
+.mainHeaders {
+   grid-row: 1;
+   text-align: center;
+   background-color: aquamarine;
+   height: 200px;
+   width: 1080px;
+}
+
+/* EVENTS SECTION */
+.bodyEvents {
+   grid-row: 2;
+   text-align: center;
+   height: 710px;
+   display: grid;
+   grid-template-rows: 65px 580px 65px;
+   width: 1080px;
+   background: #AFC9DC;
+}
+
+.eventTitle {
+   grid-row: 1;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-bottom: thin black solid;
+   background: #141c4c;
+}
+
+.titleText {
+   font-family: 'DIN Next Slab';
+   color: #f5f4f0;
+   text-align: center;
+   font-size: 45px;
+   font-weight: normal;
+   line-height: normal;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+}
+
+.eventListMain {
+   grid-row: 2;
+   background: #EDF3FA;
+}
+
+.eventBoxMain {
+   height: 119px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   padding-left: 40px;
+}
+
+.eventBoxBorder {
+   width: 1006px;
+   background: rgba(115, 119, 122, 0.20);
+   display: block;
+   height: 2px;
+   margin-top: 20px;
+}
+
+.eventName {
+   color: #2B2B2B;
+   font-family: 'Lato';
+   font-size: 28px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: .54px;
+   text-align: left;
+   margin-bottom: 2px;
+}
+
+.eventDetails {
+   color: #535353;
+   font-family: 'Lato';
+   font-size: 29px;
+   font-style: normal;
+   font-weight: normal;
+   line-height: 40px;
+   letter-spacing: 1.5px;
+   text-align: left;
+}
+
+.detailSpacer {
+   margin: 0 20px 0 20px;
+}
+
+.eventMore {
+   grid-row: 3;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: center;
+   background: #AFC9DC;
+   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75) inset;
+}
+
+.moreTextBox {
+   grid-column: 2;
+   display: grid;
+   grid-template-columns: 250px;
+   margin-right: 20px;
+}
+
+.moreText {
+   font-family: 'DIN Next Slab';
+   font-size: 35px;
+   font-style: normal;
+   font-weight: normal;
+   line-height: normal;
+   letter-spacing: 0.7px;
+   color: #091F5A;
+   margin: auto;
+   grid-column: 1;
+}
+
+.moreArrow {
+   margin-left: 4px;
+   font-size: 40px;
+   color: #091F5A;
+}
+
+/* BANNER SLIDES SECTION */
+.bodyBanners {
+   grid-row: 3;
+   text-align: center;
+   height: 300px;
+   width: 1080px;
+   /* background-color: yellow; */
+}
+
+/* MAPS SECTION */
+.bodymaps {
+   grid-row: 4;
+   text-align: center;
+   height: 635px;
+   display: grid;
+   grid-template-rows: 585px 50px;
+   width: 1080px;
+   background-color: #f5f4f0;
+}
+
+.map {
+   height: 585px;
+   grid-row: 1;
+   display: none;
+}
+
+.activeMap {
+   height: 585px;
+   grid-row: 1;
+   display: block;
+}
+
+.mapTabs {
+   display: flex;
+   max-width: 1080px;
+   position: relative;
+   grid-row: 2;
+}
+
+.tabItem {
+   background-color: #141c4c;
+   font-family: 'Lato', sans-serif;
+   font-size: 28px;
+   text-align: right;
+   padding-right: 40px;
+   border-color: #141c4c;
+   border-bottom-style: outset;
+   border-bottom-right-radius: 30px;
+   height: 50px;
+   color: #f5f4f0
+}
+
+.activeTab {
+   background-color: #1B4B95;
+   border-color: #1B4B95;
+   font-family: 'Lato', sans-serif;
+   font-size: 28px;
+   text-align: right;
+   padding-right: 40px;
+   border-bottom-style: outset;
+   border-bottom-right-radius: 30px;
+   height: 50px;
+   color: #f5f4f0
+}
+
+/* button.tabItem:focus {
+   background-color: #1B4B95;
+} */
+
+.tab1 {
+   position: absolute;
+   width: 340px;
+   top: 0;
+   left: 0;
+   z-index: 3;
+}
+
+.tab2 {
+   position: absolute;
+   width: 590px;
+   top: 0;
+   left: 0;
+   z-index: 2;
+}
+
+.tab3 {
+   position: absolute;
+   width: 840px;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+
+.tab4 {
+   position: absolute;
+   width: 1080px;
+   top: 0;
+   left: 0;
+   z-index: 0;
+}
+
+
+/* ******************MAIN FOOTER */
+
+.footer {
+   position: absolute;
+   bottom: 0;
+   grid-row: 5;
+   display: grid;
+   grid-template-columns: auto auto auto auto auto;
+   width: 1080px;
+   height: 75px;
+   background-color: #000000;
+   color: #f5f4f0;
+   font-family: 'Lato', sans-serif;
+
+}
+
+.nav {
+   font-size: 30px;
+   text-align: center;
+   margin: auto;
+   font-family: 'Lato', sans-serif;
+
+}
+
+.current {
+   font-weight: 900;
+}
+
+button.nav {
+   padding: 0;
+   background-color: #000000;
+   border: none;
+   display: block;
+   color: #f5f4f0;
+}
+
+
+a.nav {
+   outline-color: transparent;
+   text-decoration: none;
+   color: transparent;
+   margin: auto;
+}
+
+.navELM {
+   display: grid;
+   grid-template-columns: 130px 36px;
+   margin: auto;
+}
+
+.elm {
+   grid-column: 1;
+}
+
+.footerText {
+   color: #f5f4f0;
+   font-family: 'Lato', sans-serif;
+   font-size: 12px;
+   text-align: left;
+
+}
+
+.footerDots {
+   text-align: left;
+   padding-top: 8px;
+}
+
+.question {
+   grid-column: 2;
+   padding-left: 5px;
+}
+
+
+
+/*ELM MODAL CONTENT */
+
+.overlay {
+   width: 100%;
+   height: 1920px;
+   position: absolute;
+   top: 0;
+   background-color: rgba(0, 0, 0, 0.6);
+   backdrop-filter: blur(3px);
+   display: none;
+   align-items: center;
+   justify-content: center;
+   z-index: 3;
+}
+
+.modalE {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.close-modalE {
+   position: absolute;
+   top: 27rem;
+   right: 8rem;
+   font-size: 6rem;
+   color: white;
+   cursor: pointer;
+   border: none;
+   background: none;
+}
+
+.close-modalE-Main {
+   position: absolute;
+   top: 32rem;
+   right: 8rem;
+   font-size: 6rem;
+   color: white;
+   cursor: pointer;
+   border: none;
+   background: none;
+}

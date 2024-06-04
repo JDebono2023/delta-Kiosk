@@ -1,0 +1,138 @@
+/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
+
+/* Slideshow container */
+.slider {
+  position: absolute;
+  height: 300;
+  width: 1080px;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* individual slide images */
+.slide-image {
+  width: 1080px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 100%;
+  z-index: 1;
+  animation: .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
+  animation-fill-mode: forwards;
+  background-position: 50% !important;
+
+}
+
+/* individual slide images */
+.single-image {
+  width: 1080px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Next & previous buttons */
+.prevM,
+.nextM {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -50px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.nextM {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevM:hover,
+.nextM:hover {
+  background-color: #717171;
+}
+
+.dots {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 5;
+  z-index: 2;
+}
+
+.dot {
+  width: 27px;
+  height: 27px;
+  background: #FFF;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 1px solid #2B2B2B;
+  opacity: 0.6;
+}
+
+.active-dot {
+  background: #FFF;
+  border: 1px solid #2B2B2B;
+  opacity: 1;
+
+}
+
+@keyframes leftNext {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes leftCurr {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes rightNext {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes rightCurr {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+* {
+  overflow: hidden;
+  margin: 0;
+}

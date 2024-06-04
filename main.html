@@ -1,0 +1,200 @@
+<html>
+  <head>
+    <title>Kiosk</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts/Lato/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts/DINNextSlab/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts/Grotesque/stylesheet.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="data/api.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+   
+    <script src="/src/activity.js"></script>
+    
+  </head>
+  <body >
+    
+  <div id="app" class="app primaryAppGrids">
+        
+<!-- TITLE BANNER -->
+      <div id="header" class="mainHeaders">
+        <img id="" src="assets/Header.png" />
+      </div>
+      
+<!-- EVENTS -->
+    <div class="bodyEvents">
+      <div class="eventTitle">
+        <div class="titleText">
+          Today's Events
+        </div>
+      </div>
+      <div id="eventContent" class="eventListMain" ></div>
+      
+      <div class="eventMore">
+        <div class="moreTextBox">
+          <!-- <div class="moreText">More Events</div> -->
+          <a style="text-decoration: none;" id="11" href="pages/events.html" >
+            <div class="moreText">More Events <span class="moreArrow">></span></div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+   
+    <!-- ROTATING CENTRAL BANNER -->
+    <div class="bodyBanners">
+      <div id="bannerImage" ></div>
+      <div class="slider">
+        <div class="imgs">
+          
+          <div id="sliderImage" ></div>
+        </div>
+        
+        <div class="dots"></div>
+        
+      </div>
+    </div>
+
+    <!-- FLOOR MAPS -->
+    <div class="bodyMaps">
+      <div id="mapImage" ></div>
+      <div class="mapTabs">
+        <button id="5" class="tabItem tab1" onclick="openMap(1, 5); writeAnalytics(1, 121)">Lower Level</button>
+        <button id="6" class="tabItem tab2 activeTab" onclick="openMap(2, 6); writeAnalytics(1, 122)" >Main Level</button>
+        <button id="7" class="tabItem tab3" onclick="openMap(3, 7); writeAnalytics(1, 123)">Second Level</button>
+        <button id="8" class="tabItem tab4" onclick="openMap(4, 8); writeAnalytics(1, 124)">20th Floor</button>
+      </div>
+             
+    </div>
+
+    <!-- FOOTER -->
+    <nav class="footer" >
+      <a class="nav" href="main.html" ><button id="n1" class="nav current " >HOME</button></a>
+      <a class="nav" href="pages/events.html"><button id="n2" class="nav " >EVENTS</button></a>
+      <a class="nav" href="pages/attractions.html"><button id="n3" class="nav " >ATTRACTIONS</button></a>
+      <a class="nav" href="pages/menus.html"><button id="n4" class="nav " >MENUS</button></a>
+      
+      <div class="navELM">
+        <div class="elm">
+          <div class="footerText">Powered by</br> EyeLook Media Inc. ©</div>
+          <img class="footerDots" src="assets/ELMDots.png"/>
+        </div>
+                      
+        <div id="elm" class="question" >
+          <img id="open-modalE" src="assets/Info Button.png" />
+        </div>
+      </div>
+      
+    </nav>
+    
+    <!-- MODAL CONTENT -->
+    <div id="modal-overlayE" class="overlay">
+      <div id="modalE" >
+        <img class="" src="assets/ELM Info-PopUp.png">
+          <p id="close-modalE" class="close-modalE-Main">&times;</p>
+        </div>
+    </div>
+  </div>
+ </body>
+  
+  <script>
+
+  function checkForVersion() {
+
+    
+        const URL = "https://team.eyelookmedia.net/DeltaLondonArmouries/api/versiondata";
+        // const URL = "http://127.0.0.1:8000/api/versiondata";
+      fetch(URL)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          // console.log("Success:", data);
+          localStorage.setItem("serverVersion", JSON.stringify(data));
+          })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+        
+        let lv = JSON.parse(localStorage.getItem("localVersion"));
+        let sv = JSON.parse(localStorage.getItem("serverVersion"));
+        let update = JSON.parse(localStorage.getItem("update"));
+
+        let LV = lv[0].version;
+        console.log(LV)
+        let SV = sv[0].version;
+        console.log(SV)
+
+                    
+        // switch (LV == SV) {
+        //   case false :
+        //   localStorage.setItem("update", true);
+        //   // window.location.reload();
+        //   break;
+        //   case false :
+        //   localStorage.setItem("update", false);
+        //   window.location.reload();
+        //   break;
+        
+        //   default: 
+        //   console.log("no updates needed");
+        //     break;
+        // }
+
+        // switch (true) {
+        //   case LV !== SV:
+        //   localStorage.setItem("update", true);
+        //   window.location.reload();
+        //   console.log("updates needed");
+        //   // break;
+        //   case LV == SV && update == true:
+        //   localStorage.setItem("update", false);
+        //   window.location.reload();
+        //   console.log("updated");
+        //   break;
+        
+        //   default: 
+        //   console.log("no updates needed");
+        //     break;
+        // }
+
+
+        if (LV !== SV ){
+          localStorage.setItem("update", true);
+          window.location.reload();
+          
+        } else if (LV == SV && update == true) {
+          localStorage.setItem("update", false);
+          window.location.reload();
+        } else if (LV == SV ){
+          console.log("no updates needed");
+          }  
+        
+  }
+
+    
+  setInterval(checkForVersion, 30000);
+
+ 
+
+  </script>
+  <script>
+
+    // analytics - main nav
+    document.getElementById("n1").onclick = function() {writeAnalytics(1, 0)};
+    document.getElementById("n2").onclick = function() {writeAnalytics(2, 0)};
+    document.getElementById("n3").onclick = function() {writeAnalytics(3, 0)};
+    document.getElementById("n4").onclick = function() {writeAnalytics(4, 0)};
+    document.getElementById("11").onclick = function() {writeAnalytics(1, 11)};
+    document.getElementById("elm").onclick = function() {writeAnalytics(6, 0)};
+    
+    
+  </script>
+  <script src="src/slideshow.js" type="text/javascript"></script>
+  <script src="src/getEvents_Main.js" type="text/javascript"></script>
+  <script src="src/getMaps.js" type="text/javascript"></script>
+  <script src="src/popup.js"></script>
+        
+</html>

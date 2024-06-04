@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/stylesMenu.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fonts/Lato/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fonts/DINNextSlab/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fonts/Grotesque/stylesheet.css"/>
+
+
+    <script src="../main.js" type="text/javascript"></script>
+    <script src="../src/activity.js"></script>
+    <script src="../src/redirect.js"></script>
+
+</head>
+<body>
+  <div id="app" class="app menusBase pageGridMenus">
+
+    <!-- TITLE BANNER -->
+    <div id="header" class="mainHeaders">
+      <img id="" src="../assets/Header.png" />
+    </div>
+    
+    <!-- MENU CONTENT -->
+    <div class="menuContainer">
+      
+        <div class="eventTitle">
+          <div class="titleText">
+            Armouries Grille & Cantata Lounge Menus
+          </div>
+        </div>
+        
+      <div id="menu" class="menuFull">
+        
+      <div class="slideshow-container">
+        <div id="brunch-overlay" class="brunchMenuOverlay">
+          <div id="brunch">
+            <button class="prev" onclick="plusSlides(-1)">❮</button>
+            <button class="next" onclick="plusSlides(1)">❯</button>
+            <div id="dotBrunch" class="dotContainer" ></div>
+          </div>
+        </div>
+        <div id="breakfast-overlay" class="menuOverlay">
+          <div id="breakfast">
+            <button class="prev" onclick="plusSlides2(-1)">❮</button>
+            <button class="next" onclick="plusSlides2(1)">❯</button>
+            <div id="dotBreakfast" class="dotContainer" ></div>
+          </div>
+        </div>
+        <div id="dinner-overlay" class="menuOverlay">
+          <div id="dinner">
+            <button class="prev" onclick="plusSlides3(-1)">❮</button>
+            <button class="next" onclick="plusSlides3(1)">❯</button>
+            <div id="dotDinner" class="dotContainer" ></div>
+          </div>
+        </div>
+        <div id="drinks-overlay" class="menuOverlay">
+          <div id="drinks">
+            <button class="prev" onclick="plusSlides4(-1)">❮</button>
+            <button class="next" onclick="plusSlides4(1)">❯</button>
+            <div id="dotDrinks" class="dotContainer" ></div>
+          </div>
+        </div>
+       </div>
+      </div>
+      <!-- MENU SELECTION BUTTONS -->
+      <div class="menuList" >
+       <div id="open-brunch" class="menu"><img id="" src="../assets/brunch.png" /></div>
+       <div id="open-breakfast" class="menu"><img id="" src="../assets/breakfast.png" /></div>
+       <div id="open-dinner" class="menu"><img id="" src="../assets/dinner.png" /></div>
+       <div id="open-drinks" class="menu"><img id="" src="../assets/drinks.png" /></div>
+      </div>
+    </div>
+        
+    <!-- FOOTER -->
+     <div class="footer">
+      <a class="nav" href="../main.html" ><button class="nav" id="n1">HOME</button></a>
+      <a class="nav" href="events.html"><button class="nav" id="n2">EVENTS</button></a>
+      <a class="nav" href="attractions.html"><button class="nav" id="n3">ATTRACTIONS</button></a>
+      <a class="nav" href="menus.html"><button class="nav current" id="n4">MENUS</button></a>
+        
+        <div class="navELM">
+          <div class="elm">
+            <div class="footerText">Powered by</br> EyeLook Media Inc. ©</div>
+            <img class="footerDots" src="../assets/ELMDots.png"/>
+          </div>
+          <div id="elm" class="question">
+            <img  id="open-modalE" src="../assets/Info Button.png" />
+          </div>
+        </div>
+      </div> 
+      
+      <!-- MODAL CONTENT -->
+      <div id="modal-overlayE" class="overlay">
+        <div id="modalE" >
+          <img class="modalELMInfo" src="../assets/ELM Info-PopUp.png">
+            <p id="close-modalE" class="close-modalE">&times;</p>
+          </div>
+      </div>
+  </div>
+</body>
+    <script>
+      // analytics - main nav
+    document.getElementById("n1").onclick = function() {writeAnalytics(1, 0)};
+    document.getElementById("n2").onclick = function() {writeAnalytics(2, 0)};
+    document.getElementById("n3").onclick = function() {writeAnalytics(3, 0)};
+    document.getElementById("n4").onclick = function() {writeAnalytics(4, 0)};
+    document.getElementById("elm").onclick = function() {writeAnalytics(6, 0)};
+    document.getElementById("open-brunch").onclick = function() {writeAnalytics(4, 41)};
+    document.getElementById("open-breakfast").onclick = function() {writeAnalytics(4, 42)};
+    document.getElementById("open-dinner").onclick = function() {writeAnalytics(4, 43)};
+    document.getElementById("open-drinks").onclick = function() {writeAnalytics(4, 44)};
+    
+    </script>
+<script src="../src/popup.js"></script>
+<script src="../src/getMenus.js" type="text/javascript"></script>
+<script src="../src/menuModal.js"></script>
+
+</html>

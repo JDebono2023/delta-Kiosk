@@ -1,0 +1,40 @@
+.eventsBase {
+    width: 1080px;
+    height: 1920px;
+    background: #AFC9DC;
+}
+
+.pageGridEvents {
+    display: grid;
+    grid-template-rows: 200px 1645px 75px;
+    width: 1080px;
+    /* background-color: white; */
+}
+
+
+.eventContainer {
+    text-align: center;
+    height: auto;
+    display: grid;
+    grid-template-rows: 65px 1580px;
+    width: 1080px;
+}
+
+
+.eventList {
+    grid-row: 2;
+    overflow: scroll;
+}
+
+.newBox {
+    background: #EDF3FA;
+}
+
+.eventBox {
+    height: 119px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 40px;
+}

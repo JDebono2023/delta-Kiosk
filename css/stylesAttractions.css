@@ -1,0 +1,176 @@
+.attractionsBase {
+    width: 1080px;
+    height: 1920px;
+    /* background-color: green; */
+}
+
+.pageGridAttractions {
+    display: grid;
+    grid-template-rows: 200px 64px 1580px 75px;
+    width: 1080px;
+    /* background-color: white; */
+}
+
+
+.attractionTitle {
+    grid-row: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: thin black solid;
+    background: #141c4c;
+}
+
+.attractionTitleText {
+    font-family: 'DIN Next Slab';
+    color: #f5f4f0;
+    text-align: center;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.attractionsContainer {
+    grid-row: 3;
+    display: grid;
+    grid-template-rows: 1485px 95px;
+    width: 1080px;
+    background: #AFC9DC;
+}
+
+.attractionsMain {
+    grid-row: 1;
+    overflow: scroll;
+}
+
+.attractionCategory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 20px;
+}
+
+.attractionBox {
+    border-radius: 10px;
+    background: #F6F8FB;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 988px;
+    height: 236px;
+    display: grid;
+    grid-template-rows: 126px 110px;
+    margin: auto auto 13px auto;
+}
+
+.boxUpper {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 712px 276px;
+}
+
+.boxHeader {
+    grid-column: 1;
+    margin: 15px auto auto 34px
+}
+
+.boxName {
+    color: #1B4B95;
+    font-family: 'Lato';
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    margin-bottom: 10px;
+}
+
+.boxDescription {
+    color: #535353;
+    font-family: 'Lato';
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.48px;
+    margin-right: 10px;
+}
+
+.boxLogo {
+    grid-column: 2;
+    height: 123px;
+    width: 276px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logoImg {
+    max-height: 123px;
+    max-width: 276px;
+    margin-right: 10px;
+}
+
+.boxLower {
+    grid-row: 2;
+    color: #535353;
+    display: grid;
+    grid-template-columns: 828px 160px;
+}
+
+.boxDetails {
+    grid-column: 1;
+    color: #535353;
+    font-family: Lato;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.44px;
+    margin: 15px auto auto 34px
+}
+
+.textSpacer {
+    margin: auto 15px;
+}
+
+.boxQR {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+    margin-right: 10px;
+}
+
+.attractionNav {
+    grid-row: 2;
+    background-color: #AFC9DC;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.categoryButton {
+    width: 241px;
+    height: 55px;
+    border-radius: 25px;
+    background: #133C6D;
+    border-color: #133C6D;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoryButtonText {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.6px;
+}
